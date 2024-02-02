@@ -10,7 +10,7 @@
 <body>
     <div class="contact__form">
 
-        <form action="<?php echo e(route('user.customer')); ?>" method="POST">
+        <form action="<?php echo e(route('user.customer')); ?>" method="POST" enctype="multipart/form-data">
             <?php echo csrf_field(); ?>
 
             <?php echo $__env->make('common.alert', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
@@ -90,7 +90,7 @@ unset($__errorArgs, $__bag); ?>
             <div class="row g-3">
                 <div class="col-xxl-12 col-xl-12 col-12">
                     <label>Invoiced Items</label>
-                    <select class="form-select" placeholder="" name="invoiceditems" value="<?php echo e(old('invoiceditems')); ?>">
+                    <select class="form-select" placeholder="Select Your Package" name="invoiceditems" value="<?php echo e(old('invoiceditems')); ?>">
                         <?php $__errorArgs = ['invoiceditems'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
@@ -99,7 +99,7 @@ $message = $__bag->first($__errorArgs[0]); ?> <span class="text-danger"><?php ec
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>
-                        <option value=""></option>
+                        <option value="Select Your Package"></option>
                         <option value="Startup Fee">Startup Fee</option>
                         <option value="Basic Package">Basic Package</option>
                     </select>

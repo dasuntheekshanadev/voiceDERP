@@ -125,15 +125,16 @@
 
             <h2>Inquiry Details</h2>
             <hr />
-            <p>Inquiry Customer Name : <i>{{$details->name}}</i></p>
-            <p>Inquiry Customer Email : <i>{{$details->email}}</i></p>
-            <p>Inquiry Customer Subject : <i>{{$details->subject}}</i></p>
+            <p>Inquiry Customer EMP No : <i>{{$details->empno}}</i></p>
+            <p>Inquiry Customer Name : <i>{{$details->customername}}</i></p>
+            <p>Inquiry Customer Business : <i>{{$details->business}}</i></p>
+            <p>Inquiry Customer Address : <i>{{$details->address}}</i></p>
             <p>Inquiry Customer Phone Number : <i>{{$details->phone}}</i></p>
-            <p>Inquiry Customer Message : <i>{{$details->message}}</i></p>
-
+            <p>Inquiry Customer Email : <i>{{$details->email}}</i></p>
+            <p>Inquiry Customer Package : <i>{{$details->invoiceditems}}</i></p>
             <br />
 
-
+            <a href="{{ asset($details->src) }}" target="_blank"><button class="btn btn-dark btn-sm" type="button"> Preview</button></a>
 
             <br>
             Note : This is an auto generated email from VOICED.

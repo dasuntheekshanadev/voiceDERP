@@ -122,22 +122,23 @@
             <p>You have a latest inquiry... </p>
 
             <br /><br />
-            
+
             <h2>Inquiry Details</h2>
             <hr />
-            <p>Inquiry Customer Name : <i><?php echo e($details->name); ?></i></p>
-            <p>Inquiry Customer Email : <i><?php echo e($details->email); ?></i></p>
-            <p>Inquiry Customer Subject : <i><?php echo e($details->subject); ?></i></p>
+            <p>Inquiry Customer EMP No : <i><?php echo e($details->empno); ?></i></p>
+            <p>Inquiry Customer Name : <i><?php echo e($details->customername); ?></i></p>
+            <p>Inquiry Customer Business : <i><?php echo e($details->business); ?></i></p>
+            <p>Inquiry Customer Address : <i><?php echo e($details->address); ?></i></p>
             <p>Inquiry Customer Phone Number : <i><?php echo e($details->phone); ?></i></p>
-            <p>Inquiry Customer Massage : <i><?php echo e($details->message); ?></i></p>
-
+            <p>Inquiry Customer Email : <i><?php echo e($details->email); ?></i></p>
+            <p>Inquiry Customer Package : <i><?php echo e($details->invoiceditems); ?></i></p>
             <br />
 
-
+            <a href="<?php echo e(asset($details->src)); ?>" target="_blank"><button class="btn btn-dark btn-sm" type="button"> Preview</button></a>
 
             <br>
 
-        
+
             Note : This is an auto generated email from VOICED.
         </div>
     </div>

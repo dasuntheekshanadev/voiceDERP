@@ -53,9 +53,9 @@ class CustomerController extends Controller
 
             $savedData = Customer::create($data->toArray());
 
-            //$logo = GeneralSetting::where('name','logo_image')->first();
+            $logo = GeneralSetting::where('name','logo_image')->first();
 
-            //$savedData->logo = $logo->value;
+            $savedData->logo = $logo->value;
 
             Mail::to($savedData->email)->send(new CustomerUserMail($savedData));
 

@@ -10,7 +10,7 @@
 <body>
     <div class="contact__form">
 
-        <form action="{{ route('user.customer') }}" method="POST">
+        <form action="{{ route('user.customer') }}" method="POST" enctype="multipart/form-data">
             @csrf
 
             @include('common.alert')
@@ -48,9 +48,9 @@
             <div class="row g-3">
                 <div class="col-xxl-12 col-xl-12 col-12">
                     <label>Invoiced Items</label>
-                    <select class="form-select" placeholder="" name="invoiceditems" value="{{ old('invoiceditems') }}">
+                    <select class="form-select" placeholder="Select Your Package" name="invoiceditems" value="{{ old('invoiceditems') }}">
                         @error('invoiceditems') <span class="text-danger">{{ $message }}</span> @enderror
-                        <option value=""></option>
+                        <option value="Select Your Package"></option>
                         <option value="Startup Fee">Startup Fee</option>
                         <option value="Basic Package">Basic Package</option>
                     </select>
