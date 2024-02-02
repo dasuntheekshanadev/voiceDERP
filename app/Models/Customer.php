@@ -9,5 +9,5 @@ class Customer extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['empno','customername','business','address','phone','email','invoiceditems','status','src','logo'];
+    protected $fillable = ['firstname','lastname','nic','address','phone','email','invoiceditems','status','src1','src2','src3','logo'];
 }

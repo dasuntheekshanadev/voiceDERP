@@ -134,7 +134,15 @@
             <p>Inquiry Customer Package : <i>{{$details->invoiceditems}}</i></p>
             <br />
 
-            <a href="{{ asset($details->src) }}" target="_blank"><button class="btn btn-dark btn-sm" type="button"> Preview</button></a>
+            <a href="{{ asset($details->src1) }}" target="_blank"><button class="btn btn-dark btn-sm" type="button"> NIC Preview</button></a>
+
+            <br />
+
+            <a href="{{ asset($details->src2) }}" target="_blank"><button class="btn btn-dark btn-sm" type="button"> BR Preview</button></a>
+
+            <br />
+
+            <a href="{{ asset($details->src3) }}" target="_blank"><button class="btn btn-dark btn-sm" type="button"> Other Preview</button></a>
 
             <br>
 

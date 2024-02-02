@@ -4,74 +4,257 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../src/assets/css/alphastyles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.5.0/css/all.min.css" integrity="sha512-QfDd74mlg8afgSqm3Vq2Q65e9b3xMhJB4GZ9OcHDVy1hZ6pqBJPWWnMsKDXM7NINoKqJANNGBuVRIpIJ5dogfA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://demo.dashboardpack.com/architectui-html-free/main.css" rel="stylesheet">
+</head>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<title>VoiceD | Customer Care - Dashboard</title>
 </head>
 
 <body>
-    <div class="contact__form">
 
-        <form action="{{ route('user.customer') }}" method="POST" enctype="multipart/form-data">
-            @csrf
+    <div class="main-body d-flex justify-content-center align-content-center p-lg-5 p-md-2 ">
 
-            @include('common.alert')
+        <div class="container-fluid dash-fluid p-lg-3 row flex-md-row mx-auto">
+            <div class="col-lg-2 col-md-3 col-10 p-2 d-md-block align-content-start justify-content-start text-start  border-right sideNavWrapper ">
+                <div class="col-md-12 position-relative pt-5 pt-md-0">
+                    <img src="./assets/images/logo.png" alt="logo" class="w-100 " />
+                </div>
 
-            <div class="row g-3">
-                <div class="col-xxl-6 col-xl-6 col-12">
-                    <input type="text" name="empno" placeholder="EMP No" value="{{ old('empno') }}">
-                    @error('empno') <span class="text-danger">{{ $message }}</span> @enderror
-                </div>
-                <div class="col-xxl-6 col-xl-6 col-12">
-                    <input type="text" name="customername" placeholder="Customer Name" value="{{ old('customername') }}">
-                    @error('customername') <span class="text-danger">{{ $message }}</span> @enderror
-                </div>
+                <ul class="navSide w-100 d-flex flex-column mt-3 list-unstyled">
+                    <li>
+                        <a href="./">
+                            <div class="w-100 p-3 active  mb-2">
+                                <i class="fa fa-user mr-2"></i> Customer Registraion
+                            </div>
+                        </a>
+
+                    </li>
+
+                    <li>
+                        <a href="./CustomerInsight.html">
+                            <div class="w-100 p-3  mb-2">
+                                <i class="fa fa-users mr-2"></i> Customer
+                            </div>
+                        </a>
+
+                    </li>
+
+
+                    <li>
+                        <a href="./Invoices.html">
+                            <div class="w-100 p-3  mb-2">
+                                <i class="fa fa-file mr-2"></i> Invoices
+                            </div>
+                        </a>
+                    </li>
+
+                </ul>
             </div>
-            <div class="row g-3">
-                <div class="col-xxl-6 col-xl-6 col-12">
-                    <input type="text" name="business" placeholder="Business" value="{{ old('business') }}">
-                    @error('business') <span class="text-danger">{{ $message }}</span> @enderror
-                </div>
-                <div class="col-xxl-6 col-xl-6 col-12">
-                    <input type="text" name="address" placeholder="Address" value="{{ old('address') }}">
-                    @error('address') <span class="text-danger">{{ $message }}</span> @enderror
-                </div>
+
+            <div class="sideNavRes d-block d-md-none w-100 p-3 position-fixed z-index-6">
+                <i class="fa fa-bars"></i>
             </div>
-            <div class="row g-3">
-                <div class="col-xxl-6 col-xl-6 col-12">
-                    <input type="text" name="phone" id="phone" placeholder="Phone Number" value="{{ old('phone') }}">
-                    @error('phone') <span class="text-danger">{{ $message }}</span> @enderror
-                </div>
-                <div class="col-xxl-6 col-xl-6 col-12">
-                    <input type="email" name="email" placeholder="Email" value="{{ old('email') }}">
-                    @error('email') <span class="text-danger">{{ $message }}</span> @enderror
-                </div>
-            </div>
-            <div class="row g-3">
-                <div class="col-xxl-12 col-xl-12 col-12">
-                    <label>Invoiced Items</label>
-                    <select class="form-select" placeholder="Select Your Package" name="invoiceditems" value="{{ old('invoiceditems') }}">
-                        @error('invoiceditems') <span class="text-danger">{{ $message }}</span> @enderror
-                        <option value="Select Your Package"></option>
-                        <option value="Startup Fee">Startup Fee</option>
-                        <option value="Basic Package">Basic Package</option>
-                    </select>
-                </div>
-            </div>
-            <div class="row g-3">
-                <div class="col-xxl-6 col-xl-6 col-12">
-                    <label for="attachment">File Uploader</label><br>
-                    <input type="file" class="form-select" name="pdf_file" id="pdf_file" accept=".pdf" value="{{ old('pdf_file') }}">
-                    @error('pdf_file') <span class="text-danger">{{ $message }}</span> @enderror
-                </div>
-            </div>
-            <div class="row g-3">
-                <div class="col-12">
-                    <div class="btn_wrapper">
-                        <button type="submit" class="wc-btn-primary btn-hover btn-item"><span></span> Register <br>Now <i class="fa-solid fa-arrow-right"></i></button>
+
+            <div class="col-lg-10 col-md-8  col-12 py-5 py-md-0">
+
+                <div class="w-100" id="cutomerRegistration">
+                    <h3>Customer Registration Form</h3>
+                    <p>Please fill all the required Fields</p>
+
+                    <div class="mt-2 w-100 border-1 border-top py-2 ">
+                        <h5>Customer Details</h5>
                     </div>
+
+                    <form action="{{ route('user.customer') }}" method="POST" enctype="multipart/form-data">
+                        @csrf
+
+                        @include('common.alert')
+
+
+
+                        <div class="d-flex p-2 flex-column">
+                            <div class="row ">
+                                <div class="col-md-6 col-12 px-1">
+                                    <div class="form-floating mb-2">
+                                        <input type="text" name="firstname" class="form-control" placeholder="First Name" id="floatingText" value="{{ old('firstname') }}" required />
+                                        <label for="floatingTextarea">First Name <span class="">*</span></label>
+                                        @error('firstname') <span class="text-danger">{{ $message }}</span> @enderror
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12 px-1">
+                                    <div class="form-floating mb-2">
+                                        <input type="text" name="lastname" class="form-control" placeholder="Last Name" id="floatingText" value="{{ old('lastname') }}" required />
+                                        <label for="floatingTextarea">Last Name <span class="">*</span></label>
+                                        @error('lastname') <span class="text-danger">{{ $message }}</span> @enderror
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row ">
+                                <div class="col-md-6 col-12 px-1">
+                                    <div class="form-floating mb-2">
+                                        <input type="text" name="nic" class="form-control" placeholder="NIC" id="floatingText" value="{{ old('nic') }}" required />
+                                        <label for="floatingTextarea">NIC <span class="">*</span></label>
+                                        @error('nic') <span class="text-danger">{{ $message }}</span> @enderror
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12 px-1">
+                                    <div class="form-floating mb-2">
+                                        <input type="text" name="address" class="form-control" placeholder="Address" id="floatingText" value="{{ old('address') }}" required />
+                                        <label for="floatingTextarea">Address <span class="">*</span></label>
+                                        @error('address') <span class="text-danger">{{ $message }}</span> @enderror
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row ">
+                                <div class="col-md-6 col-12 px-1">
+                                    <div class="form-floating mb-2">
+                                        <input type="text" name="phone" class="form-control" placeholder="contactno" id="floatingText" value="{{ old('phone') }}" required />
+                                        <label for="floatingTextarea">Contact No <span class="">*</span></label>
+                                        @error('phone') <span class="text-danger">{{ $message }}</span> @enderror
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12 px-1">
+                                    <div class="form-floating mb-2">
+                                        <input type="email" name="email" class="form-control" placeholder="Email" id="floatingText" value="{{ old('email') }}" required />
+                                        <label for="floatingTextarea">Email <span class="">*</span></label>
+                                        @error('email') <span class="text-danger">{{ $message }}</span> @enderror
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="row ">
+                                <div class="col-md-6 col-12 px-1">
+                                    <div class="input-group mb-2">
+                                        <label class="input-group-text" for="inputnic">Upload NIC</label>
+                                        <input type="file" class="form-control" name="pdf_file1" id="pdf_file" accept=".pdf" value="{{ old('pdf_file1') }}" required>
+                                        @error('pdf_file') <span class="text-danger">{{ $message }}</span> @enderror
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12 px-1">
+                                    <div class="input-group mb-2">
+                                        <label class="input-group-text" for="inputbr">Upload BR</label>
+                                        <input type="file" class="form-control" name="pdf_file2" id="pdf_file" accept=".pdf" value="{{ old('pdf_file2') }}">
+                                        @error('pdf_file2') <span class="text-danger">{{ $message }}</span> @enderror
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="row ">
+                                <div class="col-md-6 col-12 px-1">
+                                    <div class="input-group mb-2">
+                                        <label class="input-group-text" for="ods">Other Documents</label>
+                                        <input type="file" class="form-control" name="pdf_file3" id="pdf_file" accept=".pdf" value="{{ old('pdf_file3') }}" required>
+                                        @error('pdf_file3') <span class="text-danger">{{ $message }}</span> @enderror
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="excustomer">
+                                <label class="form-check-label" for="excustomer">
+                                    Existing Customer
+                                </label>
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div class="mt-2 w-100 border-1 border-top py-2 ">
+                            <h5>Package Details</h5>
+                        </div>
+
+
+
+
+
+                        <div class="d-flex p-2 flex-column">
+
+
+
+
+                            <div class="row justify-content-center align-items-center">
+                                <div class="col-md-6 col-12 px-1">
+                                    <select class="form-select" aria-label="Default select example" name="invoiceditems" value="{{ old('invoiceditems') }}" required>
+                                    @error('invoiceditems') <span class="text-danger">{{ $message }}</span> @enderror
+                                        <option selected disabled>Select Package</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 col-12 px-1 mt-2 mt-md-0">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="baseplan">
+                                        <label class="form-check-label" for="baseplan">
+                                            Select Startup Plan
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row justify-content-start align-items-start mt-3">
+
+                                <div class="w-auto px-1">
+                                    <button type="button" class="btn btn-outline-danger ">Clear Form</button>
+                                </div>
+
+                                <div class="w-auto px-1">
+                                    <button type="submit" class="btn btn-primary ">Register</button>
+                                </div>
+
+
+
+
+
+                            </div>
+
+
+
+                        </div>
+
+
+
+
+
+
+
+                    </form>
                 </div>
+
             </div>
-        </form>
+
+
+        </div>
+
+
     </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sideNavWrapper = document.querySelector('.sideNavWrapper');
+            const sideNavRes = document.querySelector('.sideNavRes i');
+
+            sideNavRes.addEventListener('click', function() {
+                sideNavWrapper.classList.toggle('open');
+            });
+        });
+    </script>
+
 </body>
 
 </html>
