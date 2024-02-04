@@ -66,11 +66,13 @@ class CustomerController extends Controller
 
             // return PDFController::index($savedData);
 
-            Customer::generatePDF($savedData);
+            Customer::generatePDF1($savedData);
+
+            Customer::generatePDF2($savedData);
 
             // Mail::to($savedData->email)->send(new CustomerUserMail($savedData));
 
-            Mail::to('shenalliyanage.personal@gmail.com')->send(new CustomerAdminMail($savedData));
+            // Mail::to('shenalliyanage.personal@gmail.com')->send(new CustomerAdminMail($savedData));
 
             return back()->with('success', 'Noted!  We have received your message. One of our agent will contact you as soon as possible.');
         } catch (\Exception $exception) {
