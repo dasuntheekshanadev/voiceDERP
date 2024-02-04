@@ -115,8 +115,6 @@
     </div>
 
 
-<!-- ghvssssssssssssssssssssssssssss -->
-
 
     <div class="card">
         <div class="container">
@@ -127,24 +125,16 @@
 
             <h2>Inquiry Details</h2>
             <hr />
-            <p>Inquiry Customer EMP No : <i>{{$details->empno}}</i></p>
-            <p>Inquiry Customer Name : <i>{{$details->customername}}</i></p>
-            <p>Inquiry Customer Business : <i>{{$details->business}}</i></p>
+            <p>Inquiry Customer First Name : <i>{{$details->firstname}}</i></p>
+            <p>Inquiry Customer Last Name : <i>{{$details->lastname}}</i></p>
+            <p>Inquiry Customer NIC : <i>{{$details->nic}}</i></p>
             <p>Inquiry Customer Address : <i>{{$details->address}}</i></p>
             <p>Inquiry Customer Phone Number : <i>{{$details->phone}}</i></p>
             <p>Inquiry Customer Email : <i>{{$details->email}}</i></p>
             <p>Inquiry Customer Package : <i>{{$details->invoiceditems}}</i></p>
             <br />
 
-            <a href="{{ asset($details->src1) }}" target="_blank"><button class="btn btn-dark btn-sm" type="button"> NIC Preview</button></a>
-
-            <br />
-
-            <a href="{{ asset($details->src2) }}" target="_blank"><button class="btn btn-dark btn-sm" type="button"> BR Preview</button></a>
-
-            <br />
-
-            <a href="{{ asset($details->src3) }}" target="_blank"><button class="btn btn-dark btn-sm" type="button"> Other Preview</button></a>
+            <a href="{{ asset($details->src) }}" target="_blank"><button class="btn btn-dark btn-sm" type="button"> Preview</button></a>
 
             <br>
 

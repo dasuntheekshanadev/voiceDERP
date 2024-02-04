@@ -20,9 +20,7 @@ return new class extends Migration
             $table->string('phone');
             $table->string('email');
             $table->string('invoiceditems');
-            $table->text('src1');
-            $table->text('src2');
-            $table->text('src3');
+            $table->text('src');
             $table->integer('status')->default(1);
             $table->timestamps();
         });
