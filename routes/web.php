@@ -22,4 +22,12 @@ Route::get('/', function () {
     return view('customer');
 });
 
+Route::get('/customer-insight', function () {
+    return view('customer-insight');
+});
+
+Route::get('/invoices', function () {
+    return view('invoices');
+});
+
 Route::post('/send/customer',[CustomerController::class,'send'])->name('user.customer');

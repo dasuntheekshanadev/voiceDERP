@@ -25,9 +25,13 @@ body{
 {
     border-radius: 8px;
 }
-.navSide li .active{
+.navSide li a .active {
     background-color: var(--Primary-blue);
     color: var(--Primary-text-light) ;
+}
+.activeNavLink
+{
+    background-color: #161616 !important;
 }
 .navSide li a {
     color: var(--Primary-text-gray);

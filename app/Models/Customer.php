@@ -21,6 +21,7 @@ class Customer extends Model
         $data["address"] = $savedData->address;
         $data["phone"] = $savedData->phone;
         $data["email"] = $savedData->email;
+        $data["logo"] = $savedData->logo;
 
         $pdf = PDF::loadView('email-template', $data);
   
@@ -35,12 +36,13 @@ class Customer extends Model
 
     public static function generatePDF2($savedData)
     {
-        $data["email2"] = "shenalliyanage.personal@gmail.com";
+        $data["email2"] = "voiced.testmail2024@gmail.com";
         $data["title"] = "Test";
         $data["name"] = $savedData->firstname . ' ' . $savedData->lastname;
         $data["address"] = $savedData->address;
         $data["phone"] = $savedData->phone;
         $data["email"] = $savedData->email;
+        $data["logo"] = $savedData->logo;
 
         $pdf = PDF::loadView('admin-email-template', $data);
   

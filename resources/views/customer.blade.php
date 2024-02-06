@@ -11,11 +11,7 @@
 </head>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <title>VoiceD | Customer Care - Dashboard</title>
-<script>
-    function redirectToInPage() {
-        window.location.href = 'in.html';
-    }
-</script>
+
 </head>
 
 <body>
@@ -31,7 +27,7 @@
                 <ul class="navSide w-100 d-flex flex-column mt-3 list-unstyled">
                     <li>
                         <a href="./">
-                            <div class="w-100 p-3 active  mb-2">
+                            <div class="w-100 p-3 active bg-primary text-white rounded mb-2">
                                 <i class="fa fa-user mr-2"></i> Customer Registraion
                             </div>
                         </a>
@@ -39,7 +35,7 @@
                     </li>
 
                     <li>
-                        <a href="./CustomerInsight.html">
+                        <a href="customer-insight">
                             <div class="w-100 p-3  mb-2">
                                 <i class="fa fa-users mr-2"></i> Customer
                             </div>
@@ -49,7 +45,7 @@
 
 
                     <li>
-                        <a href="./Invoices.html">
+                        <a href="invoices">
                             <div class="w-100 p-3  mb-2">
                                 <i class="fa fa-file mr-2"></i> Invoices
                             </div>
@@ -201,7 +197,7 @@
                                 </div>
                                 <div class="col-md-6 col-12 px-1 mt-2 mt-md-0">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="baseplan">
+                                        <input class="form-check-input" type="checkbox" value="" id="baseplan" required>
                                         <label class="form-check-label" for="baseplan">
                                             Select Startup Plan
                                         </label>
@@ -216,7 +212,7 @@
                                 </div>
 
                                 <div class="w-auto px-1">
-                                    <button type="submit" onclick="redirectToInPage()" class="btn btn-primary">Register</button>
+                                    <button type="submit"  class="btn btn-primary">Register</button>
                                 </div>
 
 
