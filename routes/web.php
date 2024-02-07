@@ -19,8 +19,12 @@ use App\Http\Controllers\CustomerController;
 // });
 
 Route::get('/', function () {
-    return view('customer');
-});
+    return view('auth.login');
+})->name('login');
+
+// Route::get('/', function () {
+//     return view('customer');
+// });
 
 Route::get('/customer-insight', function () {
     return view('customer-insight');
@@ -31,3 +35,15 @@ Route::get('/invoices', function () {
 });
 
 Route::post('/send/customer',[CustomerController::class,'send'])->name('user.customer');
+
+Route::group(['middleware'=>'auth'],function()
+{
+    Route::get('home',function()
+    {
+        return view('home');
+    });
+});
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
