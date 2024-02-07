@@ -21,6 +21,7 @@ class Customer extends Model
         $data["address"] = $savedData->address;
         $data["phone"] = $savedData->phone;
         $data["email"] = $savedData->email;
+        $data["nic"] = $savedData->nic;
         $data["logo"] = $savedData->logo;
 
         $pdf = PDF::loadView('email-template', $data);
@@ -42,6 +43,7 @@ class Customer extends Model
         $data["address"] = $savedData->address;
         $data["phone"] = $savedData->phone;
         $data["email"] = $savedData->email;
+        $data["nic"] = $savedData->nic;
         $data["logo"] = $savedData->logo;
 
         $pdf = PDF::loadView('admin-email-template', $data);
