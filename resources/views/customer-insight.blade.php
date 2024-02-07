@@ -26,7 +26,7 @@
 
                 <ul class="navSide w-100 d-flex flex-column mt-3 list-unstyled">
                     <li>
-                        <a href="./">
+                        <a href="customer">
                             <div class="w-100 p-3 mb-2">
                                 <i class="fa fa-user mr-2"></i> Customer Registraion
                             </div>

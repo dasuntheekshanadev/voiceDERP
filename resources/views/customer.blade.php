@@ -25,7 +25,7 @@
 
                 <ul class="navSide w-100 d-flex flex-column mt-3 list-unstyled">
                     <li>
-                        <a href="home">
+                        <a href="customer">
                             <div class="w-100 p-3 active bg-primary text-white rounded mb-2">
                                 <i class="fa fa-user mr-2"></i> Customer Registraion
                             </div>
@@ -189,14 +189,16 @@
                                     <select class="form-select" aria-label="Default select example" name="invoiceditems" value="{{ old('invoiceditems') }}" required>
                                     @error('invoiceditems') <span class="text-danger">{{ $message }}</span> @enderror
                                         <option selected disabled>Select Package</option>
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
+                                        <option value="1 Month Package">1 Month Package</option>
+                                        <option value="Ad Campaign">Ad Campaign</option>
+                                        <option value="Basic">Basic - LKR 3000</option>
+                                        <option value="Standard">Standard - LKR 7000</option>
+                                        <option value="Premium">Premium - LKR 12000</option>
                                     </select>
                                 </div>
                                 <div class="col-md-6 col-12 px-1 mt-2 mt-md-0">
                                     <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="baseplan" required>
+                                        <input class="form-check-input" type="checkbox" value="" id="baseplan">
                                         <label class="form-check-label" for="baseplan">
                                             Select Startup Plan
                                         </label>
