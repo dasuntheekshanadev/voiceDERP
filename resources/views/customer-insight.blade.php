@@ -4,13 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="../src/assets/css/alphastyles.css">
-    <link href="https://demo.dashboardpack.com/architectui-html-free/main.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/font-awesome-4.7.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="../assets/css/alphastyles.css">
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/fontawesome/css/font-awesome.min.css">
 
-</head>
 
 <title>VoiceD | Customer Care - Dashboard</title>
 </head>

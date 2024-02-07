@@ -1,6 +1,21 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html lang="en">
 
-@section('content')
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="../assets/css/alphastyles.css">
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/fontawesome/css/font-awesome.min.css">
+
+
+<title>VoiceD | Customer Care - Login</title>
+</head>
+
+<body>
+    
+    
 <div class="main-body d-flex justify-content-center align-content-center p-lg-5 p-md-2 ">
 
     <div class="container-fluid dash-fluid p-lg-3 row flex-md-row mx-auto">
@@ -225,14 +240,17 @@
 
 </div>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const sideNavWrapper = document.querySelector('.sideNavWrapper');
-        const sideNavRes = document.querySelector('.sideNavRes i');
+ <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sideNavWrapper = document.querySelector('.sideNavWrapper');
+            const sideNavRes = document.querySelector('.sideNavRes i');
 
-        sideNavRes.addEventListener('click', function() {
-            sideNavWrapper.classList.toggle('open');
+            sideNavRes.addEventListener('click', function() {
+                sideNavWrapper.classList.toggle('open');
+            });
         });
-    });
-</script>
-@endsection
+    </script>
+
+</body>
+
+</html>

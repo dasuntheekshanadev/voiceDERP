@@ -1,146 +1,272 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your PDF Title</title>
+
     <style>
-        * {
-            font-family: Arial, Helvetica, sans-serif;
+        @page {
+            size: A4;
+            margin: 0;
         }
 
-        h1 {
-            text-align: center;
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            overflow-x: hidden !important;
+            box-sizing: border-box;
         }
 
-        #orders {
+        header {
 
-            border-collapse: collapse;
             width: 100%;
         }
 
-        #orders td,
-        #orders th {
-            border: 1px solid #ddd;
-            padding: 8px;
-        }
-
-        #orders tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-
-        #orders tr:hover {
-            background-color: #ddd;
-        }
-
-        #orders th {
-            padding-top: 12px;
-            padding-bottom: 12px;
-            text-align: left;
-            background-color: #060819;
-            color: white;
-        }
-
-        .card {
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-            transition: 0.3s;
-            width: 70%;
-            margin: 0 auto;
-        }
-
-
-        .container {
-            padding: 2px 16px;
-        }
-
-        .order-details {
+        .header-wrapper {
+            display: flex;
+            padding: auto;
             width: 100%;
-            margin: 15px 0 15px 0;
+            text-align: center !important;
+            justify-content: center !important;
+            align-items: center !important;
         }
 
-        .prices {
-            width: 20%;
-            float: left;
+        .content {
+            padding: 20px;
         }
 
-        .amount {
-            width: 50%;
-            display: inline;
-        }
+        footer {
 
-        .mail-button {
-            background-color: #060819;
-            border: none;
-            color: white;
-            padding: 15px 32px;
             text-align: center;
-            text-decoration: none;
+            background: rgb(138, 80, 159);
+            position: fixed;
+            width: 100%;
             display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            bottom: 0 !important;
 
         }
 
-        .button-div {
+
+
+        .customer-details,
+        .invoice-details {
             width: 100%;
-            text-align: center;
+            padding: 10px;
+
         }
 
-        .heading-div {
-            background-color: #060819;
-            color: white !important;
-            width: 70%;
-            margin: 0 auto;
-            padding: 1px;
+        .invoice-details tr td,
+        .customer-details tr td {
+            padding: 5px;
+            font-size: 10pt !important;
+            border: 1px solid #565656;
+        }
+
+
+
+        .header-wrapper {
+            background-color: rgb(138, 80, 159) !important;
+            text-align: center !important;
+            color: #fafafa !important;
+        }
+
+        .header-wrapper ul {
+            list-style: none !important;
+
+        }
+
+        .invoice-details tr td:first-child,
+        .customer-details tr td:first-child {
+            font-weight: 600 !important;
+
+        }
+
+        .invoice-table {
+            width: 100%;
+        }
+
+        .invoice-table table {
+            width: 100%;
+        }
+
+        .invoice-table table thead {
+            background-color: #3d3d3d;
+            color: #ffffff;
+            font-weight: 400 !important;
+        }
+
+        .invoice-table table thead th {
+            padding: 10px;
+        }
+
+        .invoice-table table tbody tr td {
+            padding: 10px;
+        }
+
+        .amount-box {
+            background-color: #f0f0f0;
+            padding: 5px;
         }
     </style>
 </head>
 
 <body>
+    <header>
+        <div class="header-wrapper">
 
 
+            <ul class="">
+                <li>
+                    <h1>
+                        274/1, High Level Road, Navinna,
+                        Maharagama, Sri Lanka.
+                    </h1>
+                </li>
+                <li><span class="font-bold"><i class="fa fa-phone" aria-hidden="true"></i> (+94) 114 686 689</span>
+                </li>
+                <li><span class="font-bold">BR :</span>PV00205109</li>
+                <li><span class="font-bold">TIN :</span>PV00205109</li>
+                <li> <i class="fa fa-mail-bulk "></i> digital@voiced.lk</li>
+                <li><i class="fa fa-info-circle" aria-hidden="true"></i>
+                    www.voiced.lk</li>
+            </ul>
 
-    <div class="heading-div">
-        <table style="width:100%;">
-            <tr>
-                <td style="width:70px;">
-                    <img src="{{ $logo }}" alt="logo" style="width:70px;padding-top:5px;">
-                </td>
-                <td style="padding-left: 120px;">
-                    <h1 style="text-align:left;"><a href="{{URL::to('/')}}" target="_blank" style="color:#ffffff; text-decoration:none;">VoiceD</a> </h1>
-                </td>
-            </tr>
-        </table>
-
-
-    </div>
-
-
-
-    <div class="card">
-        <div class="container">
-
-            <p></p>
-
-            <br /><br />
-            
-            <h2>Customer Details</h2>
-            <hr />
-            <p>Customer Name : <i>{{ $name }}</i></p>
-            <p>Customer Email : <i>{{ $email }}</i></p>
-            <p>Customer Address : <i>{{ $address }}</i></p>
-            <p>Customer Phone Number : <i>{{ $phone }}</i></p>
-
-            <br />
-
-
-
-            <br>
-
-        
-            Note : This is an auto generated email from VoiceD.
         </div>
+    </header>
+
+    <div class="content">
+        <!-- Your dynamic content goes here -->
+        <div class="table-wrapper ">
+            <table class="customer-details ">
+                <tr>
+                    <td>Name</td>
+                    <td>Kasun Perera</td>
+                </tr>
+
+                <tr>
+                    <td>NIC</td>
+                    <td>200015225489</td>
+                </tr>
+
+                <tr>
+                    <td>BR No</td>
+                    <td>THY89865</td>
+                </tr>
+
+                <tr>
+                    <td>Contact No</td>
+                    <td>0112548596</td>
+                </tr>
+
+                <tr>
+                    <td>Address</td>
+                    <td>No 34/B, Malibon Road, Mawanalla </td>
+                </tr>
+            </table>
+
+
+            <table class="invoice-details">
+                <tr>
+                    <td>Invoice No</td>
+                    <td>#554822</td>
+                </tr>
+
+                <tr>
+                    <td>Order Id</td>
+                    <td>#214020</td>
+                </tr>
+
+                <tr>
+                    <td>Invoice Date</td>
+                    <td>23/02/2024</td>
+                </tr>
+
+                <tr>
+                    <td>Due Date</td>
+                    <td>23/02/2024</td>
+                </tr>
+
+            </table>
+
+
+        </div>
+
+
+        <section class="invoice-table">
+            <table class="invoice-table-wrapper">
+                <thead>
+                    <th>#No</th>
+                    <th>Description</th>
+                    <th>Unit Price (LKR)</th>
+                    <th>QTY</th>
+                    <th>Advance</th>
+                    <th>SubTotal</th>
+
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>E-Commerce Web</td>
+                        <td>285,000</td>
+                        <td>1</td>
+                        <td>120,000</td>
+                        <td>285,000</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>E-Commerce Web</td>
+                        <td>285,000</td>
+                        <td>1</td>
+                        <td>120,000</td>
+                        <td>285,000</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>E-Commerce Web</td>
+                        <td>285,000</td>
+                        <td>1</td>
+                        <td>120,000</td>
+                        <td>285,000</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>E-Commerce Web</td>
+                        <td>285,000</td>
+                        <td>1</td>
+                        <td>120,000</td>
+                        <td>285,000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <div class="amount-box">
+                <h5>Amount in Letters</h5>
+                <div class="letter-box">
+
+                </div>
+            </div>
+        </section>
+
+
     </div>
 
+
+
+    <footer>
+        <p>&copy;
+            <?php echo date("Y"); ?> Your Company Name. All rights reserved.
+        </p>
+    </footer>
 </body>
 
 </html>

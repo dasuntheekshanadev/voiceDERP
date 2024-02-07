@@ -1,10 +1,25 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html lang="en">
 
-@section('content')
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="../../assets/css/alphastyles.css">
+    <link rel="stylesheet" href="../../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/fontawesome/css/font-awesome.min.css">
+
+
+<title>VoiceD | Customer Care - Login</title>
+</head>
+
+<body>
+
+
 <div class="main-body container-fluid d-flex justify-content-center align-content-center">
     <div class="container  d-flex justify-content-center align-items-center flex-column position-absolute top-50 translate-middle-x translate-middle-y">
         <div class="col-md-4 col-sm-4 col-8 position-relative">
-            <img src="./assets/images/logo.png" alt="logo" class="w-100 h-100" />
+            <img src="../../assets/images/logo.png" alt="logo" class="w-100 h-100" />
         </div>
         <p>Please Login to Continue</p>
 
@@ -50,4 +65,19 @@
 
 
 </div>
-@endsection
+
+
+ <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sideNavWrapper = document.querySelector('.sideNavWrapper');
+            const sideNavRes = document.querySelector('.sideNavRes i');
+
+            sideNavRes.addEventListener('click', function() {
+                sideNavWrapper.classList.toggle('open');
+            });
+        });
+    </script>
+
+</body>
+
+</html>
