@@ -16,7 +16,7 @@ class Customer extends Model
     public static function generatePDF1($savedData)
     {
         $data["email1"] = $savedData->email;
-        $data["title"] = "Test";
+        $data["title"] = "Customer Invoice";
         $data["name"] = $savedData->firstname . ' ' . $savedData->lastname;
         $data["address"] = $savedData->address;
         $data["phone"] = $savedData->phone;
@@ -28,7 +28,7 @@ class Customer extends Model
         Mail::send('email-template', $data, function($message)use($data, $pdf) {
             $message->to($data["email1"], $data["email1"])
                     ->subject($data["title"])
-                    ->attachData($pdf->output(), "test.pdf");
+                    ->attachData($pdf->output(), "invoice.pdf");
         });
   
         // dd('Mail sent successfully');
@@ -37,7 +37,7 @@ class Customer extends Model
     public static function generatePDF2($savedData)
     {
         $data["email2"] = "voiced.testmail2024@gmail.com";
-        $data["title"] = "Test";
+        $data["title"] = "Customer Invoice";
         $data["name"] = $savedData->firstname . ' ' . $savedData->lastname;
         $data["address"] = $savedData->address;
         $data["phone"] = $savedData->phone;
@@ -49,7 +49,7 @@ class Customer extends Model
         Mail::send('admin-email-template', $data, function($message)use($data, $pdf) {
             $message->to($data["email2"], $data["email2"])
                     ->subject($data["title"])
-                    ->attachData($pdf->output(), "test.pdf");
+                    ->attachData($pdf->output(), "invoice.pdf");
         });
   
         // dd('Mail sent successfully');
