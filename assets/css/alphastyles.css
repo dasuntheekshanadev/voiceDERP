@@ -1,0 +1,185 @@
+:root{
+
+    --Primary-blue:#1847a1;
+    --Primary-purple:#802686;
+    --Primary-pink:#eb3f7f;
+    --Primar-text:#161616;
+    --Primary-text-light:#fafafa;
+    --Primary-text-gray: #3d3d3d;
+}
+
+body{
+    user-select: none;
+}
+.login-btn
+{
+    background: rgb(24,71,161);
+    background: linear-gradient(145deg, rgba(24,71,161,1) 0%, rgba(121,42,129,1) 100%);
+    border: none !important;
+}
+.main-body
+{
+    padding: 0 !important;
+}
+.navSide li div 
+{
+    border-radius: 8px;
+}
+.navSide li a .active {
+    background-color: var(--Primary-blue);
+    color: var(--Primary-text-light) ;
+}
+.activeNavLink
+{
+    background-color: #161616 !important;
+}
+.navSide li a {
+    color: var(--Primary-text-gray);
+        text-decoration: none;
+}
+.navSide li:hover div 
+{
+    background-color: #8eb6ff;
+    transition: all .5s ease-in;
+    cursor: pointer;
+    color: var(--Primary-text-light) ;
+   
+}
+.dash-fluid
+{
+    padding: 0 !important;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #f5f5f5 !important; 
+}
+
+.sideNavRes 
+{
+    background-color: #ffffff;
+}
+.sideNavRes i
+{
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+.indicator-card 
+{
+ .card-1{
+    background-image: linear-gradient(to right, #2677c2, #009ad9, #00b8bd, #00ce78);
+    color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 5px 5px 13px -5px rgba(0,0,0,0.47);
+-webkit-box-shadow: 5px 5px 13px -5px rgba(0,0,0,0.47);
+-moz-box-shadow: 5px 5px 13px -5px rgba(0,0,0,0.47);
+ } 
+ 
+ .card-2{
+    color: #ffffff;
+background: #75A6FD;
+background: linear-gradient(270deg, #75A6FD, #E341E3);
+border-radius: 8px;
+box-shadow: 5px 5px 13px -5px rgba(0,0,0,0.47);
+-webkit-box-shadow: 5px 5px 13px -5px rgba(0,0,0,0.47);
+-moz-box-shadow: 5px 5px 13px -5px rgba(0,0,0,0.47);
+ }
+ .card-3{
+    background-image: linear-gradient(to right, #2677c2, #009ad9, #00b8bd, #00ce78);
+    color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 5px 5px 13px -5px rgba(0,0,0,0.47);
+-webkit-box-shadow: 5px 5px 13px -5px rgba(0,0,0,0.47);
+-moz-box-shadow: 5px 5px 13px -5px rgba(0,0,0,0.47);
+ }
+ .card-4{
+    color: #ffffff;
+    background: #75A6FD;
+    background: linear-gradient(270deg, #75A6FD, #E341E3);
+    border-radius: 8px;
+    box-shadow: 5px 5px 13px -5px rgba(0,0,0,0.47);
+-webkit-box-shadow: 5px 5px 13px -5px rgba(0,0,0,0.47);
+-moz-box-shadow: 5px 5px 13px -5px rgba(0,0,0,0.47);
+ }
+
+ 
+}
+.ico-wrapper
+{
+    object-position: center;
+    width: 54px;
+    height: 54px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.ico-wrapper img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: flex;
+}
+.main-body-container
+{
+    margin-top: 36px !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 576px) {
+    
+    .cusReg-body
+    {
+        padding-top:96px !important;
+        margin-top:18px !important;
+    }
+    .sideNavWrapper
+    {
+       
+        position: fixed !important;
+        width: 80vw !important;
+        height: 100vh;
+        z-index: 3 !important;
+        background-color: #f5f5f5 ;
+        transform: translateX(-100%);
+        transition: all .5s ease-in-out;
+    }
+
+.sideNavRes
+{
+    z-index: 6 !important;
+    
+}
+.sideNavRes i
+{
+    z-index: 6 !important;
+}
+    .sideNavWrapper.open
+    {
+        transform: translateX(0);
+        transition: all .5s ease-in-out;
+    }
+    .cutomerInsightTable, .invoiceTable
+    {
+        max-width: 100vh;
+     
+        overflow: auto;
+    }
+}

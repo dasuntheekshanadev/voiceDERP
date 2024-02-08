@@ -26,8 +26,17 @@
 
                 <ul class="navSide w-100 d-flex flex-column mt-3 list-unstyled">
                     <li>
+                        <a href="salesdashboard">
+                            <div class="w-100 p-3   rounded mb-2">
+                                <i class="fa fa-user mr-2"></i> Dashboard
+                            </div>
+                        </a>
+
+                    </li>
+
+                    <li>
                         <a href="customer">
-                            <div class="w-100 p-3 mb-2">
+                            <div class="w-100 p-3 mb-2 ">
                                 <i class="fa fa-user mr-2"></i> Customer Registraion
                             </div>
                         </a>
@@ -36,7 +45,7 @@
 
                     <li>
                         <a href="customer-insight">
-                            <div class="w-100 p-3 active bg-primary text-white rounded mb-2">
+                            <div class="w-100 p-3 active bg-primary text-white  mb-2">
                                 <i class="fa fa-users mr-2"></i> Customer
                             </div>
                         </a>
@@ -48,6 +57,15 @@
                         <a href="invoices">
                             <div class="w-100 p-3  mb-2">
                                 <i class="fa fa-file mr-2"></i> Invoices
+                            </div>
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="login">
+                            <div class="w-100 p-3  mb-2">
+                                <i class="fa fa-sign-out mr-2"></i> SignOut
                             </div>
                         </a>
                     </li>

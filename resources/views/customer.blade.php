@@ -25,8 +25,17 @@
 
                 <ul class="navSide w-100 d-flex flex-column mt-3 list-unstyled">
                     <li>
+                        <a href="salesdashboard">
+                            <div class="w-100 p-3  rounded mb-2">
+                                <i class="fa fa-user mr-2"></i> Dashboard
+                            </div>
+                        </a>
+
+                    </li>
+
+                    <li>
                         <a href="customer">
-                            <div class="w-100 p-3 active bg-primary text-white rounded mb-2">
+                            <div class="w-100 p-3 mb-2 active bg-primary text-white">
                                 <i class="fa fa-user mr-2"></i> Customer Registraion
                             </div>
                         </a>
@@ -47,6 +56,15 @@
                         <a href="invoices">
                             <div class="w-100 p-3  mb-2">
                                 <i class="fa fa-file mr-2"></i> Invoices
+                            </div>
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="login">
+                            <div class="w-100 p-3  mb-2">
+                                <i class="fa fa-sign-out mr-2"></i> SignOut
                             </div>
                         </a>
                     </li>
@@ -189,8 +207,6 @@
                                     <select class="form-select" aria-label="Default select example" name="invoiceditems" value="{{ old('invoiceditems') }}" required>
                                     @error('invoiceditems') <span class="text-danger">{{ $message }}</span> @enderror
                                         <option selected disabled>Select Package</option>
-                                        <option value="1 Month Package">1 Month Package</option>
-                                        <option value="Ad Campaign">Ad Campaign</option>
                                         <option value="Basic">Basic - LKR 3000</option>
                                         <option value="Standard">Standard - LKR 7000</option>
                                         <option value="Premium">Premium - LKR 12000</option>
